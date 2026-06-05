@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/cputemp", "pulseaudio", "network", "battery",  "cpu", "memory", "tray"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%I:%M %p  %a %b %d}"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+
+    "memory": {
+        "format": " {}%",
+        "tooltip": true
+
+    },
+
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": " {ipaddr}",
+        "format-disconnected": "⚠ Disconnected",
+		"on-click": "pkill 'nm-connection' || nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " muted",
+        "format-icons": {
+            "default": ["🔈", "🔉", "🔊"]
+        },
+        "on-click": "pkill pavucontrol || pavucontrol"
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+
+    "custom/cputemp": {
+        "exec": "sensors 2>/dev/null | grep 'Package id 0' | awk '{print \"󰻠 \" $4}'",
+        "interval": 3,
+        "format": "{}"
+    },
+
+    "battery": {
+        "format": "{icon}{capacity}%",
+        "format-charging": "{capacity}% ⚡",
+        "format-icons": [" ", " ", " ", " ", " "],
+        "interval": 30,
+		"tooltip": true
+    }
+}

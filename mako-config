@@ -1,0 +1,15 @@
+anchor=top-right
+margin=10
+default-timeout=3000
+on-button-left=dismiss
+
+
+# Appearance 
+background-color=#1a1a2e
+text-color=#ffffff
+border-color=#33ccffee
+border-radius=10
+border-size=2
+padding=10
+font=MesloLGM Nerd Font 11
+width=300
