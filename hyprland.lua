@@ -23,26 +23,24 @@ hl.config({
         border_size = 2,
         col = {
             active_border   = "rgba(33ccffee)",
-            inactive_border = "rgba(595959aa)",
-        },
-        layout = "dwindle",
-    },
+            inactive_border = "rgba(595959aa)"},
+        layout = "dwindle"},
     decoration = {
         rounding = 10,
-    active_opacity   = 0.95,
-    inactive_opacity = 0.45,
+    	active_opacity   = 0.95,
+    	inactive_opacity = 0.45,
         blur = {
             enabled = true,
             size    = 3,
-            passes  = 1,
-        },
-    },
+            passes  = 1},
+		shadow = {
+			enabled = true,
+			range   = 40,
+			color   = "rgba(00000088)"}},
     animations = {
-        enabled = true,
-    },
+        enabled = true},
     dwindle = {
-        preserve_split = true,
-    },
+        preserve_split = true},
     input = {
         sensitivity  = 0.5,
         follow_mouse = 2,
@@ -52,9 +50,7 @@ hl.config({
             drag_lock            = true,
             clickfinger_behavior = true,
             disable_while_typing = true,
-        },
-    },
-})
+	}}})
 
 -- ─────────────────────────────────────────────
 -- ENVIRONMENT
